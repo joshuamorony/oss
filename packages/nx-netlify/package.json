@@ -1,7 +1,27 @@
 {
   "name": "@joshmorony/nx-netlify",
+  "description": "An Nx plugin for deploying your sites to Netlify",
   "version": "0.0.1",
+  "homepage": "https://github.com/joshuamorony/oss/tree/main/packages/nx-netlify",
+  "author": "Josh Morony",
+  "license": "MIT",
+  "keywords": [
+    "nx",
+    "executor",
+    "netlify",
+    "deploy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuamorony/oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshuamorony/oss/issues"
+  },
   "main": "src/index.js",
   "generators": "./generators.json",
-  "executors": "./executors.json"
+  "executors": "./executors.json",
+  "devDependencies": {
+    "netlify-cli": "8.6.15"
+  }
 }

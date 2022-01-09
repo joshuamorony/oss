@@ -66,9 +66,12 @@ export default async function runExecutor(
 
   if (result.success) {
     console.log(`✔ Your site was successfully deployed`);
+    return result;
   } else {
-    console.log(`Site deploy failed :(`);
+    console.error(`❌ Site deploy failed`);
+    return {
+      error: '❌ Site deploy failed',
+      success: false,
+    };
   }
-
-  return result;
 }

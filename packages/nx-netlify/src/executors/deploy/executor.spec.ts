@@ -1,11 +1,9 @@
 import { DeployExecutorSchema } from './schema';
 import executor from './executor';
 
-const options: DeployExecutorSchema = {};
+const options: DeployExecutorSchema = {
+  siteId: 'abc',
+  deployDir: 'apps/test/public',
+};
 
-describe('Deploy Executor', () => {
-  it('can run', async () => {
-    const output = await executor(options);
-    expect(output.success).toBe(true);
-  });
-});
+// describe('Deploy Executor', () => {});
