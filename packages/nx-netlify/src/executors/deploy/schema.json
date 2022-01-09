@@ -11,11 +11,11 @@
     },
     "deployDir": {
       "type": "string",
-      "description": "The path to the built output to be deployed e.g. apps/yourapp/public"
+      "description": "The path to the folder within the project that contains the build output to be deployed e.g. public"
     },
     "functionsDir": {
       "type": "string",
-      "description": "The path to the folder that contains built Lambda functions to deploy e.g. apps/yourapp/functions"
+      "description": "The path to the folder within the project that contains built Lambda functions to deploy e.g. functions"
     },
     "buildTarget": {
       "type": "string",
@@ -27,10 +27,53 @@
       "description": "Do not build before deploying",
       "default": false
     },
+    "alias": {
+      "type": "string",
+      "description": "Specifies the alias for deployment, the string at the beginning of the deploy subdomain."
+    },
+    "auth": {
+      "type": "string",
+      "description": "Netlify auth token to deploy with"
+    },
+    "json": {
+      "type": "boolean",
+      "description": "Output deployment data as JSON"
+    },
+    "message": {
+      "type": "string",
+      "description": "A short message to include in the deploy log"
+    },
+    "open": {
+      "type": "boolean",
+      "description": "Open site after deploy"
+    },
+    "prod": {
+      "type": "boolean",
+      "description": "Deploy to production"
+    },
     "prodIfUnlocked": {
       "type": "boolean",
-      "description": "Add the --prodIfUnlocked flag",
-      "default": false
+      "description": "Deploy to production if unlocked, create a draft otherwise"
+    },
+    "skipFunctionsCache": {
+      "type": "boolean",
+      "description": "Ignore any functions created as part of a previous build or deploy commands, forcing them to be bundled again as part of the deployment"
+    },
+    "timeout": {
+      "type": "string",
+      "description": "Timeout to wait for deployment to finish"
+    },
+    "debug": {
+      "type": "boolean",
+      "description": "Print debugging information"
+    },
+    "httpProxy": {
+      "type": "string",
+      "description": "Proxy server address to route requests through."
+    },
+    "httpProxyCertificateFilename": {
+      "type": "string",
+      "description": "Certificate file to use when connecting using a proxy server"
     }
   },
   "required": ["siteId", "deployDir"]

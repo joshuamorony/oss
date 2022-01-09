@@ -41,19 +41,64 @@ export default async function runExecutor(
     }
   }
 
-  if (!process.env.NETLIFY_TOKEN) {
-    console.error('🚨 Define an environment variable for NETLIFY_TOKEN');
+  if (!process.env.NETLIFY_TOKEN && !options.auth) {
+    console.error(
+      '🚨 Define an environment variable for NETLIFY_TOKEN or supply it manually as an option for "auth"'
+    );
     return { success: false };
   }
 
-  let deployCommand = `netlify deploy --auth=$NETLIFY_TOKEN --site='${options.siteId}' --dir='${options.deployDir}'`;
+  const projectRoot = `${context.workspace.workspaceLayout.appsDir}/${context.projectName}`;
+  const auth = options.auth ? options.auth : '$NETLIFY_TOKEN';
+
+  let deployCommand = `netlify deploy --auth=${auth} --site='${options.siteId}' --dir='${projectRoot}/${options.deployDir}'`;
 
   if (options.functionsDir) {
-    deployCommand += ` --functions='${options.functionsDir}'`;
+    deployCommand += ` --functions='${projectRoot}/${options.functionsDir}'`;
+  }
+
+  if (options.alias) {
+    deployCommand += ` --alias='${options.alias}'`;
+  }
+
+  if (options.json) {
+    deployCommand += ` --json`;
+  }
+
+  if (options.message) {
+    deployCommand += ` --message='${options.message}'`;
+  }
+
+  if (options.open) {
+    deployCommand += ` --open`;
+  }
+
+  if (options.prod) {
+    deployCommand += ` --prod`;
   }
 
   if (options.prodIfUnlocked) {
     deployCommand += ` --prodIfUnlocked`;
+  }
+
+  if (options.skipFunctionsCache) {
+    deployCommand += ` --skip-functions-cache`;
+  }
+
+  if (options.timeout) {
+    deployCommand += ` --timeout='${options.timeout}'`;
+  }
+
+  if (options.debug) {
+    deployCommand += ` --debug`;
+  }
+
+  if (options.httpProxy) {
+    deployCommand += ` --httpProxy='${options.httpProxy}'`;
+  }
+
+  if (options.httpProxyCertificateFilename) {
+    deployCommand += ` --httpProxyCertificateFilename='${options.httpProxyCertificateFilename}'`;
   }
 
   console.log(`Attempting deploy from 📂 ./${options.deployDir}`);
