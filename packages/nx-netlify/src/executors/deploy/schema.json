@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Deploy executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "siteId": {
+      "type": "string",
+      "description": "The id of the Netlify site you want to deploy to"
+    },
+    "deployDir": {
+      "type": "string",
+      "description": "The path to the built output to be deployed e.g. apps/yourapp/public"
+    },
+    "functionsDir": {
+      "type": "string",
+      "description": "The path to the folder that contains built Lambda functions to deploy e.g. apps/yourapp/functions"
+    },
+    "buildTarget": {
+      "type": "string",
+      "description": "The build target command",
+      "default": "build"
+    },
+    "skipBuild": {
+      "type": "boolean",
+      "description": "Do not build before deploying",
+      "default": false
+    },
+    "prodIfUnlocked": {
+      "type": "boolean",
+      "description": "Add the --prodIfUnlocked flag",
+      "default": false
+    }
+  },
+  "required": ["siteId", "deployDir"]
+}

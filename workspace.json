@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "nx-netlify": "packages/nx-netlify",
+    "nx-netlify-e2e": "packages/nx-netlify-e2e"
+  }
 }
