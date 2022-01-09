@@ -48,7 +48,10 @@ export default async function runExecutor(
     return { success: false };
   }
 
-  const projectRoot = `${context.workspace.workspaceLayout.appsDir}/${context.projectName}`;
+  const projectRoot = `${context.root}/${
+    context.workspace.projects[context.projectName].root
+  }`;
+
   const auth = options.auth ? options.auth : '$NETLIFY_TOKEN';
 
   let deployCommand = `netlify deploy --auth=${auth} --site='${options.siteId}' --dir='${projectRoot}/${options.deployDir}'`;
