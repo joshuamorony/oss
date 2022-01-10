@@ -3,7 +3,7 @@
 ## Usage
 
 ```
-npm install @joshmorony/nx-netlify --save-dev
+npm install netlify-cli@3.39.4 @joshmorony/nx-netlify --save-dev
 ```
 
 Add the following target to your project in `workspace.json`:
