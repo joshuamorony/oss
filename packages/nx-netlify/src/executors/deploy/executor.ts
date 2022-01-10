@@ -11,10 +11,6 @@ export default async function runExecutor(
   if (options.skipBuild) {
     console.log(`📦 Skipping build`);
   } else {
-    if (!context.target) {
-      throw new Error('Target required for building');
-    }
-
     const buildTarget = options.buildTarget ? options.buildTarget : 'build';
 
     console.log(
