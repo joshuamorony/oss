@@ -11,6 +11,10 @@ export default async function runExecutor(
   if (options.skipBuild) {
     console.log(`📦 Skipping build`);
   } else {
+    if (!context.target) {
+      throw new Error('Target required for building');
+    }
+
     const buildTarget = options.buildTarget ? options.buildTarget : 'build';
 
     console.log(
@@ -50,7 +54,7 @@ export default async function runExecutor(
 
   const auth = options.auth ? options.auth : '$NETLIFY_TOKEN';
 
-  let deployCommand = `netlify deploy --auth=${auth} --site='${options.siteId}' --dir='${projectRoot}/${options.deployDir}'`;
+  let deployCommand = `npx netlify-cli@3.39.4 deploy --auth=${auth} --site='${options.siteId}' --dir='${projectRoot}/${options.deployDir}'`;
 
   if (options.functionsDir) {
     deployCommand += ` --functions='${projectRoot}/${options.functionsDir}'`;
