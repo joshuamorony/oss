@@ -24,7 +24,7 @@ Add the following target to your project in `workspace.json`:
 Trigger deploy:
 
 ```
-nx mysite deploy
+nx deploy mysite
 ```
 
 ### Supported options
