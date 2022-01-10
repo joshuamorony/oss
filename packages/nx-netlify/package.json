@@ -1,7 +1,7 @@
 {
   "name": "@joshmorony/nx-netlify",
   "description": "An Nx plugin for deploying your sites to Netlify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/joshuamorony/oss/tree/main/packages/nx-netlify",
   "author": "Josh Morony",
   "license": "MIT",
