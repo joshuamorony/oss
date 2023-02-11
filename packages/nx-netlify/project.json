@@ -1,5 +1,6 @@
 {
-  "root": "packages/nx-netlify",
+  "name": "nx-netlify",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/nx-netlify/src",
   "projectType": "library",
   "targets": {
@@ -12,14 +13,14 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/nx-netlify"],
+      "outputs": ["{workspaceRoot}/coverage/packages/nx-netlify"],
       "options": {
-        "jestConfig": "packages/nx-netlify/jest.config.js",
+        "jestConfig": "packages/nx-netlify/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/nx-netlify",

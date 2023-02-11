@@ -3,5 +3,6 @@
   "projects": {
     "nx-netlify": "packages/nx-netlify",
     "nx-netlify-e2e": "packages/nx-netlify-e2e"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
