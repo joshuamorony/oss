@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@joshmorony/nx-netlify": ["packages/nx-netlify/src/index.ts"],
-      "@joshmorony/remark-shorten": ["packages/remark-shorten/src/index.ts"]
+      "@joshmorony/nx-netlify": ["packages/nx-netlify/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
