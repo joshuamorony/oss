@@ -10,6 +10,13 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@angular/core@16.0.0-rc.2":
+  version "16.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-16.0.0-rc.2.tgz#ee2ec9f468b4ccd334961de158216014dc85e1f1"
+  integrity sha512-T+OkDrkpsTbQKSzIA1Rv6mJdEw+Hyg2sGidQc2SEqp+qEIvTsUgEQMFVvop8Td4YM5cCgHDbgIYdy2BK+X1UFw==
+  dependencies:
+    tslib "^2.3.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.7", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"

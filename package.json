@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@angular/core": "16.0.0-rc.2",
     "@nrwl/nx-plugin": "15.6.3",
     "tslib": "^2.0.0"
   },
