@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@joshmorony/nx-netlify": ["packages/nx-netlify/src/index.ts"],
-      "@joshmorony/remark-shorten": ["packages/remark-shorten/src/index.ts"]
+      "@joshmorony/remark-shorten": ["packages/remark-shorten/src/index.ts"],
+      "@joshmorony/signal-with-error": [
+        "packages/signal-with-error/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

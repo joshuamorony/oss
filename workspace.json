@@ -3,7 +3,8 @@
   "projects": {
     "nx-netlify": "packages/nx-netlify",
     "nx-netlify-e2e": "packages/nx-netlify-e2e",
-    "remark-shorten": "packages/remark-shorten"
+    "remark-shorten": "packages/remark-shorten",
+    "signal-with-error": "packages/signal-with-error"
   },
   "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
