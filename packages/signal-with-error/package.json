@@ -1,8 +1,9 @@
 {
   "name": "@joshmorony/signal-with-error",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "commonjs",
   "peerDependencies": {
-    "@angular/core": "16.0.0-rc.2"
+    "@angular/core": "16.x",
+    "rxjs": "7.x"
   }
 }
