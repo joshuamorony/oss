@@ -18,8 +18,10 @@ supply is synchronous (if it is not, the signal will throw an error).
 
 ## Example Usage
 
+**With initial value:**
+
 ```ts
-  data = toSignalWithError(this.getFromAPI())
+  data = toSignalWithError(this.getFromAPI(), [])
 
   getFromAPI() {
     return of(null).pipe(
@@ -29,7 +31,22 @@ supply is synchronous (if it is not, the signal will throw an error).
       )
     );
   }
+```
 
+**Without initial value (requires sync observable):**
+
+```ts
+  data = toSignalWithError(this.getFromAPI())
+
+  getFromAPI() {
+    return of(null).pipe(
+      delay(2000),
+      switchMap(() =>
+        this.http.get<any>("https://jsonplaceholder.typicode.com/todos")
+      ),
+      startWith([])
+    );
+  }
 ```
 
 ```html
