@@ -1,5 +1,9 @@
 # toSignalWithError
 
+```
+npm install @joshmorony/signal-with-error
+```
+
 Converts an observable into a pair of signals: **value** which will contain the
 success value or `undefined`, and **error** which will contain any error or
 `undefined`.
