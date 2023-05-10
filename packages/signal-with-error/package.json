@@ -1,6 +1,6 @@
 {
   "name": "@joshmorony/signal-with-error",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "commonjs",
   "repository": {
     "type": "git",
@@ -18,9 +18,13 @@
   "author": {
     "name": "Joshua Morony"
   },
+  "homepage": "https://github.com/joshuamorony/oss/tree/main/packages/signal-with-error",
+  "bugs": {
+    "url": "https://github.com/joshuamorony/oss/issues"
+  },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": "^16.0.0",
-    "rxjs": "^5.0.0-beta.6"
+    "rxjs": "^6.5.3 || ^7.5.0"
   }
 }
