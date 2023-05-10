@@ -1,9 +1,26 @@
 {
   "name": "@joshmorony/signal-with-error",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshuamorony/oss"
+  },
+  "description": "Convert an observable into two signals: one that contains the latest value, and another that contains any error",
+  "keywords": [
+    "observables",
+    "rxjs",
+    "signals",
+    "angular",
+    "errors",
+    "reactive"
+  ],
+  "author": {
+    "name": "Joshua Morony"
+  },
+  "license": "MIT",
   "peerDependencies": {
-    "@angular/core": "16.0.0-rc.2",
-    "rxjs": "7.x"
+    "@angular/core": "^16.0.0",
+    "rxjs": "^5.0.0-beta.6"
   }
 }
